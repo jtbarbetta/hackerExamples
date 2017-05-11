@@ -1,0 +1,44 @@
+main  {
+    width: 100%;
+}
+
+main > div {
+    padding: 5px;
+}
+
+main > div > div {
+    border-style: solid; 
+    border-color: #000;
+    border-width: 1px 0px 1px 1px;
+    height: 40px;
+}
+
+main > div > div:last-of-type {
+    border-right-width: 1px;
+}
+
+@media all and (max-width: 768px) {
+    main > div > div:nth-of-type(2) {
+        border-right-width: 1px;
+    }
+
+    main > div > div:nth-of-type(3),
+    main > div > div:nth-of-type(4) {
+        border-top-width: 0px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    main > div > div {
+        border-width: 1px 1px 1px 1px;
+    }
+
+    div.col-xs-6 {
+        width: 100%
+    }
+
+    main > div > div:first-of-type {
+        border-bottom-width: 0px;
+    }
+}
+

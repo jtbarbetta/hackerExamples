@@ -1,0 +1,56 @@
+main > div {
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    width: 100%;
+}
+
+main > div > div {
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px 0px 1px 1px;
+
+    display: -webkit-flex;
+    display: flex;
+
+    height: 40px;
+    flex: 1 auto;
+}
+
+main > div > div:last-of-type {
+    border-right-width: 1px;
+}
+
+@media all and (max-width: 720px) {
+    main > div > div {
+        flex: 0 0 49%;
+    }
+
+    main > div > div:nth-of-type(2) {
+        border-right-width: 1px;
+    }
+
+    main > div > div:nth-of-type(3),
+    main > div > div:nth-of-type(4) {
+        border-top-width: 0px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    main > div {
+        flex-direction: column;
+    }
+
+    main > div > div {
+        border-width: 1px 1px 1px;
+        width: 100%;
+    }
+
+    main > div > div:first-of-type {
+        border-bottom-width: 0px;
+    }
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "hackerRankJTB",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.14.0",
+    "lodash": "^4.17.4",
+    "underscore": "^1.8.3",
+    "bignumber": "*"
+  }
+}
