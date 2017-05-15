@@ -13,11 +13,13 @@ main > div > div {
     border-color: #000;
     border-width: 1px 0px 1px 1px;
 
+    box-sizing: border-box;
+
     display: -webkit-flex;
     display: flex;
 
     height: 40px;
-    flex: 1 auto;
+    flex: 1 1 auto;
 }
 
 main > div > div:last-of-type {
@@ -26,7 +28,7 @@ main > div > div:last-of-type {
 
 @media all and (max-width: 720px) {
     main > div > div {
-        flex: 0 0 49%;
+        flex: 0 0 50%;
     }
 
     main > div > div:nth-of-type(2) {

@@ -17,7 +17,15 @@ main > div > div:last-of-type {
     border-right-width: 1px;
 }
 
-@media all and (max-width: 768px) {
+/* if viewport is 721px wide up to 768px (bootstrap threshold) */
+@media all and (min-width: 721px) and (max-width: 768px) {
+    div.col-xs-6 {
+        width: 25%;
+    }
+}
+
+/* if viewport is 720px wide or smaller */
+@media all and (max-width: 720px) {
     main > div > div:nth-of-type(2) {
         border-right-width: 1px;
     }
@@ -28,6 +36,7 @@ main > div > div:last-of-type {
     }
 }
 
+/* if view port is 400px wide or smaller */
 @media all and (max-width: 400px) {
     main > div > div {
         border-width: 1px 1px 1px 1px;
